@@ -19,6 +19,11 @@ config status
 ```
 config ls-tree master --name-only
 ```
-
+## Clone to a new machine
+```
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+git clone --bare https://github.com/markdgray/dotfiles $HOME/.cfg
+config checkout
+```
 # Reference
 * https://www.atlassian.com/git/tutorials/dotfiles
