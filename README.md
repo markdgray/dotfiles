@@ -22,8 +22,9 @@ config ls-tree master --name-only
 ## Clone to a new machine
 ```
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-git clone --bare https://github.com/markdgray/dotfiles $HOME/.cfg
+git clone --bare git@github.com:markdgray/dotfiles.git $HOME/.cfg
 config checkout
+config push --set-upstream origin master
 ```
 # Reference
 * https://www.atlassian.com/git/tutorials/dotfiles
