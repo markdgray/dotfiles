@@ -23,6 +23,7 @@ config ls-tree master --name-only
 ```
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 git clone --bare git@github.com:markdgray/dotfiles.git $HOME/.cfg
+config config --local status.showUntrackedFiles no
 config checkout
 config push --set-upstream origin master
 ```
