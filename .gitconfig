@@ -1,0 +1,11 @@
+[include]
+	path = ~/.gitconfig.extra
+[user]
+	email = mark.d.gray@redhat.com
+	name = Mark Gray
+[sendemail]
+	annotate = yes
+	smtpencryption = ssl
+	smtpserver = smtp.gmail.com
+	smtpserverport = 465
+	multiEdit = false
