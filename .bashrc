@@ -8,7 +8,7 @@ fi
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
-    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+	PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 export PATH
 
@@ -27,11 +27,14 @@ alias ga="git add"
 alias gc="git commit -s"
 alias gca="git commit -s --amend"
 alias gfu="git fetach upstream"
-alias gl="git log"
+alias gl="git log --format=oneline"
+alias gll="git log"
+alias gd="git diff"
+alias gs="git status"
 alias gll="git log --format=oneline"
 
 parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
 export PS1="\u@\h \[\e[32m\]\w \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ "
