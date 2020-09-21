@@ -32,6 +32,7 @@ alias gll="git log"
 alias gd="git diff"
 alias gs="git status"
 alias gll="git log --format=oneline"
+alias gco="git checkout"
 
 parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
