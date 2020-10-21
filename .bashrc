@@ -16,6 +16,10 @@ export PATH
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
+
+export PROMPT_COMMAND="history -a; history -n"
+export HISTTIMEFORMAT="%d/%m/%y %T "
+
 source <(kubectl completion bash)
 alias k=kubectl
 complete -F __start_kubectl k
