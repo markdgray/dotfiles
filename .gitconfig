@@ -9,3 +9,7 @@
 	smtpserver = smtp.gmail.com
 	smtpserverport = 465
 	multiEdit = false
+[core]
+        abbrev = 12
+[pretty]
+        fixes = Fixes: %h (\"%s\")
