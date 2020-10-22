@@ -13,6 +13,7 @@ fi
 export PATH
 
 export GOPATH=`go env GOPATH`
+export PATH=$GOPATH/bin:$PATH
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
