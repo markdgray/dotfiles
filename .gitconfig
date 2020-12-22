@@ -15,3 +15,5 @@
         fixes = Fixes: %h (\"%s\")
 [alias]
 	publish = !/usr/bin/git-publish
+[branch]
+	autosetuprebase = always
