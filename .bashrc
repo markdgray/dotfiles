@@ -47,6 +47,8 @@ alias grum="git reset --hard upstream/master"
 alias gsh="git show"
 alias gk="git add -u && git commit -s -m \"WIP\""
 
+alias pg="pwclient git-am"
+
 parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
