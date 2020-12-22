@@ -48,5 +48,9 @@ parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
+alias a="ansible -u magray -i ~/code/scripts/hosts"
+alias ap="ansible-playbook -u magray -i ~/code/scripts/hosts"
+alias ap="ansible-playbook -u root -i ~/code/scripts/hosts"
+
 export PS1="\u@\h \[\e[32m\]\w \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ "
 alias config='/usr/bin/git --git-dir=/home/magray/.cfg/ --work-tree=/home/magray'
