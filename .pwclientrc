@@ -1,0 +1,10 @@
+[options]
+default=ovn
+
+[ovn]
+url = https://patchwork.ozlabs.org/xmlrpc/
+[ovs]
+url = https://patchwork.ozlabs.org/xmlrpc/
+[net]
+url = https://patchwork.ozlabs.org/xmlrpc 
+

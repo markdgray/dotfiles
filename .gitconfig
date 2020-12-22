@@ -13,3 +13,5 @@
         abbrev = 12
 [pretty]
         fixes = Fixes: %h (\"%s\")
+[alias]
+	publish = !/usr/bin/git-publish
