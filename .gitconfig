@@ -17,3 +17,5 @@
 	publish = !/usr/bin/git-publish
 [branch]
 	autosetuprebase = always
+[pw]
+	server = https://patchwork.ozlabs.org/
