@@ -29,6 +29,16 @@ complete -F __start_kubectl k
 
 export PATH=$PATH:$(go env GOPATH)/bin
 
+review_patchwork() {
+	if [ "$#" -ne 2 ]; then
+		echo "Usage: command <branch_name> <patchwork ID>"
+		return 1
+	fi
+	git fetch upstream
+	git checkout -b review/$1 upstream/master
+	git-pw patch apply $2
+}
+alias grev=review_patchwork
 alias gcl="git clone"
 alias ga="git add"
 alias gc="git commit -s"
