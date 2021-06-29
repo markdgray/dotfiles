@@ -19,3 +19,5 @@
 	autosetuprebase = always
 [notes]
 	rewriteRef = refs/notes/commits
+[pw]
+	server = https://patchwork.ozlabs.org/
