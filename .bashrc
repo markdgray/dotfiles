@@ -31,14 +31,25 @@ export PATH=$PATH:$(go env GOPATH)/bin
 
 review_patchwork() {
 	if [ "$#" -ne 2 ]; then
-		echo "Usage: command <branch_name> <patchwork ID>"
+		echo "Usage: command <branch_name> <patchwork series ID>"
 		return 1
 	fi
 	git fetch upstream
 	git checkout -b review/$1 upstream/master
-	git-pw patch apply $2
+	git-pw series apply $2
 }
+
+review_github() {
+	if [ "$#" -ne 2 ]; then
+		echo "Usage: command <branch_name> <pr number>"
+		return 1
+	fi
+	git fetch upstream pull/$2/head:review/$1
+	git checkout review/$1
+}
+alias gh=review_github
 alias grev=review_patchwork
+alias gpw=review_patchwork
 alias gcl="git clone"
 alias ga="git add"
 alias gc="git commit -s"
