@@ -13,7 +13,7 @@ fi
 export PATH
 
 export GOPATH=`go env GOPATH`
-export PATH=$GOPATH/bin:$PATH
+export PATH=$HOME/ddlog/bin:$GOPATH/bin:$PATH
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
@@ -70,3 +70,5 @@ alias ap="ansible-playbook -u root -i ~/code/scripts/hosts"
 
 export PS1="\u@\h \[\e[32m\]\w \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ "
 alias config='/usr/bin/git --git-dir=/home/magray/.cfg/ --work-tree=/home/magray'
+source "$HOME/.cargo/env"
+export DDLOG_HOME=$HOME/ddlog
