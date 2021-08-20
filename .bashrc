@@ -23,7 +23,7 @@ stty -ixon
 
 # User specific aliases and functions
 
-export PROMPT_COMMAND="history -a; history -n"
+#export PROMPT_COMMAND="history -a; history -n"
 export HISTTIMEFORMAT="%d/%m/%y %T "
 
 source <(kubectl completion bash)
