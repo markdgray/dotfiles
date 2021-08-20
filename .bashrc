@@ -15,6 +15,9 @@ export PATH
 export GOPATH=`go env GOPATH`
 export PATH=/usr/local/go/bin/:$HOME/ddlog/bin:$GOPATH/bin:$PATH
 
+# To enable i-search (ctrl-s)
+stty -ixon
+
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
